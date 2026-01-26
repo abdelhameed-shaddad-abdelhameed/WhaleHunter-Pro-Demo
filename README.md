@@ -46,14 +46,12 @@ Since the code is private, here is an overview of the engineering architecture u
 
 ```mermaid
 graph TD
-    A[Blockchain Nodes (RPC)] -->|Async Web3| B(Core Engine)
-    B -->|Filter & Decode| C{Event Processor}
-    C -->|High Value?| D[Notification Service]
-    C -->|Data| E[(SQLite / PostgreSQL)]
-    E --> F[Streamlit Dashboard]
-    D --> G[Telegram/Discord]
-File Structure Overview
-The project follows a modular, scalable pattern:
+    A["Blockchain Nodes (RPC)"] -->|"Async Web3"| B("Core Engine")
+    B -->|"Filter & Decode"| C{"Event Processor"}
+    C -->|"High Value?"| D["Notification Service"]
+    C -->|Data| E[("SQLite / PostgreSQL")]
+    E --> F["Streamlit Dashboard"]
+    D --> G["Telegram/Discord"]
 ```
 ```Plaintext
 WhaleHunter-Pro/
